@@ -1,0 +1,15 @@
+{
+    "test_loss": 3.0279,
+    "eval_samples": 2000,
+    "num_total_samples": 20000,
+    "train_samples": 16000,
+    "validation_samples": 2000,
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 5e-05,
+    "warmup_steps": 300,
+    "max_input_length": 512,
+    "max_target_length": 64,
+    "model": "/kaggle/working/saved_pre_trained_model",
+    "device": "CUDA GPU (Tesla T4) x2"
+}

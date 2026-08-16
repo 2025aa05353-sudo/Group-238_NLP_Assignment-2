@@ -1,0 +1,150 @@
+# =============================================================================
+# requirements.txt
+# -----------------------------------------------------------------------------
+# Purpose:
+# This file lists all Python libraries (dependencies) required to run the
+# Automatic Question Generation Engine for E-Learning (NLP Assignment 2).
+#
+# Course  : Natural Language Processing (S2-25_AIMLCZG530)
+# Program : M.Tech. in AIML, BITS Pilani (WILP)
+# Group   : Group 238
+#
+# To install all required libraries, run:
+#     py -3.11 -m pip install -r requirements.txt
+#
+# This ensures every user installs the same package versions, making the
+# project reproducible and avoiding compatibility issues.
+# =============================================================================
+
+
+# =============================================================================
+# Installation
+# -----------------------------------------------------------------------------
+# Install all required libraries using one of the following commands:
+#
+# Windows (Recommended when multiple Python versions are installed):
+#     py -3.11 -m pip install -r requirements.txt
+#     or
+#     py -m pip install -r requirements.txt
+#
+# Linux / macOS:
+#     python3 -m pip install -r requirements.txt
+#
+# Standard Python installation:
+#     python -m pip install -r requirements.txt
+#
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Streamlit
+# Purpose:
+# Develop the interactive web UI, navigation sidebar, input mode selectors,
+# model switching controls, and tabular display for generated Q&A pairs.
+# -----------------------------------------------------------------------------
+streamlit==1.60.0
+
+
+# -----------------------------------------------------------------------------
+# PyTorch (torch)
+# Purpose:
+# Deep learning framework backend used for running model fine-tuning and inference
+# on sequence-to-sequence T5 models (CPU and CUDA GPU support).
+# -----------------------------------------------------------------------------
+torch==2.13.0
+
+
+# -----------------------------------------------------------------------------
+# Transformers (Hugging Face)
+# Purpose:
+# Load pre-trained T5 model weights (`valhalla/t5-small-qg-hl`), tokenizer, and
+# manage fine-tuning (Trainer) and sequence generation pipelines.
+# -----------------------------------------------------------------------------
+transformers==5.14.1
+
+
+# -----------------------------------------------------------------------------
+# Datasets (Hugging Face)
+# Purpose:
+# Loads and prepares the SQuAD v1.1 dataset used for the
+# model fine-tuning experiment.
+# -----------------------------------------------------------------------------
+datasets==5.0.1
+
+
+# -----------------------------------------------------------------------------
+# Accelerate (Hugging Face)
+# Purpose:
+# Provides hardware execution abstraction (CPU / GPU) for PyTorch Trainer engine.
+# -----------------------------------------------------------------------------
+accelerate==1.14.0
+
+
+# -----------------------------------------------------------------------------
+# SentencePiece
+# Purpose:
+# Subword tokenization backend required by Hugging Face Transformers for T5
+# model tokenizers (T5Tokenizer / T5TokenizerFast).
+# -----------------------------------------------------------------------------
+sentencepiece==0.2.2
+
+
+# -----------------------------------------------------------------------------
+# NLTK (Natural Language Toolkit)
+# Purpose:
+# - Sentence tokenization and word tokenization
+# - Part-of-Speech (POS) tagging for noun phrase extraction
+# - Sentence-level BLEU-4 and METEOR metric computation
+# -----------------------------------------------------------------------------
+nltk==3.10.0
+
+
+# -----------------------------------------------------------------------------
+# Pandas
+# Purpose:
+# Format generated Q&A results, save/read training logs (`training_log.csv`), 
+# and parse CSV document uploads.
+# -----------------------------------------------------------------------------
+pandas==3.0.5
+
+
+# -----------------------------------------------------------------------------
+# Matplotlib
+# Purpose:
+# Auto-generate loss convergence plots (`loss_curve.png`) during model fine-tuning.
+# -----------------------------------------------------------------------------
+matplotlib==3.11.1
+
+
+# -----------------------------------------------------------------------------
+# PyPDF
+# Purpose:
+# Parse and extract raw text from uploaded PDF document files.
+# -----------------------------------------------------------------------------
+pypdf==6.14.2
+
+
+# -----------------------------------------------------------------------------
+# ROUGE-Score
+# Purpose:
+# Calculate ROUGE-1 (F1) and ROUGE-L (F1) evaluation metrics comparing candidate
+# generated questions against ground truth reference questions.
+# -----------------------------------------------------------------------------
+rouge-score==0.1.2
+
+
+# -----------------------------------------------------------------------------
+# Hugging Face Hub
+# Purpose:
+# Manage model repository downloads and authentication protocols for remote weights.
+# -----------------------------------------------------------------------------
+huggingface-hub==1.27.0
+
+
+# -----------------------------------------------------------------------------
+# Requests
+# Purpose:
+# Downloads the model archive from the project's GitHub Releases when the
+# local model directories are missing.
+# -----------------------------------------------------------------------------
+requests==2.34.2
